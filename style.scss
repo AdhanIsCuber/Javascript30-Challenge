@@ -7,6 +7,7 @@ sans-serif;
 $color-yellow: #ffc107;
 body {
   font-family: $font-body;
+  background-color: #f3f6f6;
 }
 
 header {
@@ -29,22 +30,31 @@ header {
 .card {
   border-radius: 0 !important;
   border: none;
+  background-color: #f6c90e;
   .card-header {
     font-weight: 500;
     font-size: 18px;
     border: none;
+    background-color: #f6c90e;
   }
   .card-body {
-    min-height: 200px;
     max-height: 200px;
+    padding: 0;
+    overflow: hidden;
+    .image-thumb {
+      height: 100%;
+    }
   }
   .card-footer {
     border: none;
+    background-color: #f6c90e !important;
   }
   .btn-light {
-    color: #ffc107 !important;
-    border-radius: 50px;
-    min-width: 7rem;
+    color: #f6c90e !important;
+    min-width: 120px;
     margin: 0 .5rem;
+    border: none;
+    border-radius: 0 !important;
+    background-color: white;
   }
 }
