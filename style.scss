@@ -1,0 +1,50 @@
+// font
+$font-title: 'Trade Winds',
+cursive;
+$font-body: 'Open Sans',
+sans-serif;
+// color
+$color-yellow: #ffc107;
+body {
+  font-family: $font-body;
+}
+
+header {
+  .jumbotron {
+    background: url("https://www.jpl.nasa.gov/spaceimages/images/wallpaper/PIA14293-1600x1200.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  h1 {
+    font-family: $font-title;
+    color: $color-yellow;
+    font-size: 42px;
+  }
+  p {
+    color: grey;
+  }
+}
+
+.card {
+  border-radius: 0 !important;
+  border: none;
+  .card-header {
+    font-weight: 500;
+    font-size: 18px;
+    border: none;
+  }
+  .card-body {
+    min-height: 200px;
+    max-height: 200px;
+  }
+  .card-footer {
+    border: none;
+  }
+  .btn-light {
+    color: #ffc107 !important;
+    border-radius: 50px;
+    min-width: 7rem;
+    margin: 0 .5rem;
+  }
+}

@@ -1,65 +1,67 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-  <title></title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="styles/style.css" rel="stylesheet">
+  <title>Hello, world!</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+    crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Trade+Winds" rel="stylesheet">
+  <link rel="stylesheet" href="style.min.css">
 </head>
 
 <body>
-  <div class="keys">
-    <div class="key" data-key="65">
-      <kbd>A</kbd>
-      <span class="sound">Clap</span>
+  <header>
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h1 class="title">JavaScript30 - Challenge</h1>
+        <p class="lead">This is a road trip challenge learning Javascript from
+          <a href="">WesBos</a> .
+          <br>
+          <span>- Wirya Ramadhan</span>
+        </p>
+      </div>
     </div>
-    <div class="key" data-key="83">
-      <kbd>S</kbd>
-      <span class="sound">Hihat</span>
-    </div>
-    <div class="key" data-key="68">
-      <kbd>D</kbd>
-      <span class="sound">Kick</span>
-    </div>
-    <div class="key" data-key="70">
-      <kbd>F</kbd>
-      <span class="sound">Openhat</span>
-    </div>
-    <div class="key" data-key="71">
-      <kbd>G</kbd>
-      <span class="sound">Boom</span>
-    </div>
-    <div class="key" data-key="72">
-      <kbd>H</kbd>
-      <span class="sound">Ride</span>
-    </div>
-    <div class="key" data-key="74">
-      <kbd>J</kbd>
-      <span class="sound">Snare</span>
-    </div>
-    <div class="key" data-key="75">
-      <kbd>K</kbd>
-      <span class="sound">Tom</span>
-    </div>
-    <div class="key" data-key="76">
-      <kbd>L</kbd>
-      <span class="sound">Tink</span>
-    </div>
-  </div>
+  </header>
 
-  <audio data-key="65" src="/assets/sounds/clap.wav"></audio>
-  <audio data-key="83" src="/assets/sounds/hihat.wav"></audio>
-  <audio data-key="68" src="/assets/sounds/kick.wav"></audio>
-  <audio data-key="70" src="/assets/sounds/openhat.wav"></audio>
-  <audio data-key="71" src="/assets/sounds/boom.wav"></audio>
-  <audio data-key="72" src="/assets/sounds/ride.wav"></audio>
-  <audio data-key="74" src="/assets/sounds/snare.wav"></audio>
-  <audio data-key="75" src="/assets/sounds/tom.wav"></audio>
-  <audio data-key="76" src="/assets/sounds/tink.wav"></audio>
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <div class="card text-white bg-warning mb-3" style="max-width: 20rem;">
+            <div class="card-header text-center">Javascript Drum Kit</div>
+            <div class="card-body">
+              <h4 class="card-title">!!!</h4>
+              <p class="card-text">Nanti isinya gambar.</p>
+            </div>
+            <div class="card-footer text-center">
+              <a class="btn btn-light" href="/01-JSDrumkit/index.html">Live Demo</a>
+              <a class="btn btn-light">Source Code</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+        <div class="col-md-4"></div>
+      </div>
+    </div>
+  </section>
 
+  <footer>
 
-  <script src="drumkit.js"></script>
+  </footer>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>
