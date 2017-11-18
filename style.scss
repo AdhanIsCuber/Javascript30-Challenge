@@ -1,8 +1,6 @@
 // font
-$font-title: 'Trade Winds',
-cursive;
-$font-body: 'Open Sans',
-sans-serif;
+$font-title: 'Trade Winds', cursive;
+$font-body: 'Open Sans', sans-serif;
 // color
 $color-yellow: #ffc107;
 body {
@@ -38,11 +36,13 @@ header {
     background-color: #f6c90e;
   }
   .card-body {
-    max-height: 200px;
+    max-height: 180px;
     padding: 0;
     overflow: hidden;
-    .image-thumb {
+    
+    img.image-thumb {
       height: 100%;
+      object-position: center;
     }
   }
   .card-footer {
