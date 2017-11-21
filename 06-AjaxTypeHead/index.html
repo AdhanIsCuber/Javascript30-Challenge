@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title></title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="styles/ajaxTypeHead.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+</head>
+
+<body>
+  <form action="" class="search-form">
+    <input type="text" class="search" placeholder="48Group Member">
+    <ul class="suggestions">
+      <li>Filter for a Name</li>
+      <li>or Team</li>
+    </ul>
+  </form>
+
+  <script>
+    const endpoint = "fourtyeight.json";
+
+    const member = [];
+
+    fetch(endpoint)
+      .then(blob => blob.json())
+      .then(data => member.push(...data));
+
+    function findMatches(wordToMatch, member) {
+      return member.filter(names => { 
+        const regex = new RegExp(wordToMatch, 'gi');
+        return names.name.match(regex) || names.team.match(regex)
+      });
+    }
+
+    function numberWithCommas(x) {
+      return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+    }
+
+    function displayMatches() {
+      const matchArray = findMatches(this.value, member);
+      const html = matchArray.map(names => {
+        const regex = new RegExp(this.value,
+          'gi');
+        const nameName = names.name.replace(regex, `
+<span class="hl">${this.value}</span>`);
+        const teamName = names.team.replace(regex, `
+<span class="hl">${this.value}</span>`);
+        return `
+<li>
+  <span class="avatar"><img src=".${names.avatar}"></span>
+<span class="name">${nameName}, ${names.age}</span>
+  <span class="population">${numberWithCommas(teamName)}</span>
+</li>
+`;
+      }).join('');
+      suggestions.innerHTML = html;
+    }
+    const searchInput = document.querySelector('.search');
+    const suggestions = document.querySelector('.suggestions');
+    searchInput.addEventListener('change', displayMatches);
+    searchInput.addEventListener('keyup',
+      displayMatches);
+  </script>
+</body>
+
+</html>
