@@ -43,10 +43,8 @@
       const html = matchArray.map(names => {
         const regex = new RegExp(this.value,
           'gi');
-        const nameName = names.name.replace(regex, `
-<span class="hl">${this.value}</span>`);
-        const teamName = names.team.replace(regex, `
-<span class="hl">${this.value}</span>`);
+        const nameName = names.name.replace(regex, `<span class="hl">${this.value}</span>`);
+        const teamName = names.team.replace(regex, `<span class="hl">${this.value}</span>`);
         return `
 <li>
   <span class="avatar"><img src=".${names.avatar}"></span>

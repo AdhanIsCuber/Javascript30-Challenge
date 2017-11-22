@@ -16,3 +16,5 @@ I publish my challenge on [ramajs30.tk](ramajs30.tk).
 - Day 3 - Playing CSS Variable with JS
 - Day 4 - Array In Javascript
 - Day 5 - Flex Panel Gallery
+- Day 6 - AJAX Type Head
+- Day 7 - Array In Javascript Part 2
