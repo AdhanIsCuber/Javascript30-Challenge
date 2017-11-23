@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Console Tricks!</title>
+</head>
+
+<body>
+
+  <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+  <script>
+    const cats = [{ name: 'Squizzy', age: 2 }, { name: 'Atom', age: 8 }];
+    function makeGreen() {
+      const p = document.querySelector('p');
+      p.style.color = '#BADA55';
+      p.style.fontSize = '50px';
+    }
+    // Regular
+    console.log("hello")
+
+    // Interpolated
+    console.log("Hello, I am %s", "Cool")
+    
+    // Styled
+    console.log("%c I am Wirya Ramadhan", "font-size: 50px; background: #edf232; text-shadow: 5px 5px 0 #ffc600;")
+
+    // warning!
+    console.warn("Awas! Ada Kids Jaman Now")
+
+    // Error :|
+    console.error("%c OMAE WA MO SHINDEIRU!!! NANIIIIIIIIIIIIII????", "font-size: 50px;")
+    // Info
+    console.info("Ini Inponya gan");
+
+    // Testing
+    const p = document.querySelector('p');
+    console.assert(p.classList.contains('ouch'), 'Anjay, SAlAH KAMAR OM!!!');
+
+    // clearing
+    // console.clear();
+
+    // Viewing DOM Elements
+    console.log(p)
+    console.dir(p)
+
+    // Grouping together
+    cats.forEach(cat => {
+      console.groupCollapsed(`${cat.name}`);
+      console.log(`This is ${cat.name}`);
+      console.log(`${cat.name} is ${cat.age}`);
+      console.log(`${cat.name} is ${cat.age * 7} cat years old`);
+      console.groupEnd(`${cat.name}`);
+    })
+
+    // counting
+    console.count("Wirya Ramadhan")
+    console.count("Adhan")
+    console.count("AdhanIsCuber")
+
+    // timing
+    console.log("Fetching Data Brooooo!!!")
+    fetch(cats)
+      .then(data => data.json())
+      .then(data => {
+        console.timeEnd("fetching data");
+        console.log(data);
+      })
+
+      console.table(cats)
+
+  </script>
+</body>
+
+</html>
