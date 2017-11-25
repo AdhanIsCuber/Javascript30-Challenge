@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="styles/videoPlayer.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="player">
+      <video src="assets/MusicVideo.mp4" class="video__player viewer"></video>
+      <div class="control__player">
+        <div class="progress">
+          <div class="progress__filled"></div>
+        </div>
+        <button class="button__player toggle" title="Toggle Play">&#x25B6;</button>
+        <input type="range" class="slider__player" name="volume" min="0" max="1" step="0.05" value="1">
+        <input type="range" class="slider__player" name="playbackRate" min="0.5" max="2" step="0.1" value="1">
+        <button class="button__player" data-skip="-15">&#x23EA; 15s</button>
+        <button class="button__player" data-skip="15">15s &#x23E9;</button>
+      </div>
+    </div>
+    <script src="VideoPlayer.js"></script>
+  </body>
+</html>
